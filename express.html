@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Details - Express.js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background: url('pexels-pixabay-531880.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+        
+        .section-container {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 20px 0;
+            color: #ffffff;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .section-container img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        /* Alternating styles */
+        .section-right img {
+            order: 2;
+        }
+        .section-left img {
+            order: 1;
+        }
+        .section-left .content {
+            order: 2;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <!-- Section 1 -->
+        <div class="container section-container section-right fade-in">
+            <img src="C:\Users\lenov\OneDrive\Desktop\Home Assignment\express\image1.jpg" alt="Express.js Logo">
+            <div class="content">
+                <h2>What is Express.js?</h2>
+                <p>Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It is a lightweight framework that helps developers create efficient and scalable server-side applications.</p>
+                <p>Developed as an open-source project, Express.js is one of the most popular web frameworks for Node.js. It simplifies server-side development by providing a layer on top of the core Node.js HTTP module, allowing for easier handling of routing, middleware, and HTTP requests.</p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="container section-container section-left fade-in">
+            <img src="express/feature2.jpg" alt="Key Features">
+            <div class="content">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Fast and lightweight: Express.js provides a minimalistic core with various HTTP utility methods for building a web application faster.</li>
+                    <li>Middleware support: Easy integration of middleware to handle requests, perform authentication, logging, etc.</li>
+                    <li>Routing: Powerful URL routing mechanism that allows you to define various routes based on HTTP methods (GET, POST, etc.).</li>
+                    <li>Template engines: Supports various templating engines like Pug, EJS, and Handlebars for dynamic HTML rendering.</li>
+                    <li>Compatibility: Works seamlessly with other Node.js frameworks and tools, including MongoDB, Angular, and more.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="container section-container section-right fade-in">
+            <img src="express/feature3.jpg" alt="Advantages of Express.js">
+            <div class="content">
+                <h2>Advantages of Using Express.js</h2>
+                <ul>
+                    <li>Easy to learn: With basic knowledge of JavaScript and Node.js, developers can quickly start building applications with Express.js.</li>
+                    <li>Asynchronous: Built on Node.js, it uses an event-driven, non-blocking I/O model, making it efficient for real-time applications.</li>
+                    <li>Active community: With a large and active community, finding solutions and libraries for different use cases is straightforward.</li>
+                    <li>Flexible: Offers a variety of third-party middleware modules that can be used for additional functionality.</li>
+                    <li>Great for APIs: Ideal for building RESTful APIs and microservices due to its simplicity and extensibility.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="container section-container section-left fade-in">
+            <img src="express/feature4.jpg" alt="Express.js Ecosystem">
+            <div class="content">
+                <h2>Express.js Ecosystem</h2>
+                <p>Express.js integrates seamlessly with various databases like MongoDB, MySQL, and PostgreSQL, allowing developers to build dynamic, data-driven applications. Its compatibility with front-end frameworks like Angular, React, and Vue.js makes it a versatile choice for full-stack development.</p>
+                <p>The framework's middleware system enables adding features such as authentication, session management, error handling, and request logging with ease. This extensibility has made Express.js a preferred choice for building robust and scalable web applications.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary btn-lg">Back to Features</a>
+        </div>
+    </div>
+
+    <script>
+        // Add the fade-in effect after the page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelectorAll('.fade-in').forEach(element => {
+                    element.classList.add('visible');
+                });
+            }, 200);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
